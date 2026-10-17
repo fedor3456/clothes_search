@@ -1,0 +1,7 @@
+# Install torch and torchvision separately using the official PyTorch selector.
+# https://pytorch.org/get-started/locally/
+numpy
+Pillow
+matplotlib
+jupyterlab
+pytest

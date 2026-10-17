@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+
+# Data and model artifacts
+/data/
+/models/
+/checkpoints/
+/runs/
+/outputs/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# OS
+Thumbs.db
+.DS_Store
