@@ -13,13 +13,14 @@ MEAN, STD = [0.5, 0.5, 0.5], [0.5, 0.5, 0.5]
 
 def train_transform(size=C.IMG_SIZE):
     return T.Compose([
-        T.RandomResizedCrop(size, scale=(0.6, 1.0), ratio=(0.6, 1.0)),
+        T.RandomApply([T.RandomRotation(12, fill=(255, 255, 255))], p=0.5),
+        T.RandomResizedCrop(size, scale=(0.4, 1.0), ratio=(0.5, 1.1)),
         T.RandomHorizontalFlip(),
-        T.ColorJitter(0.3, 0.3, 0.2, 0.02),
-        T.RandomGrayscale(0.05),
+        T.ColorJitter(0.4, 0.4, 0.3, 0.03),
+        T.RandomGrayscale(0.1),
         T.ToTensor(),
         T.Normalize(MEAN, STD),
-        T.RandomErasing(p=0.3),
+        T.RandomErasing(p=0.5, scale=(0.02, 0.25), value="random"),
     ])
 
 
