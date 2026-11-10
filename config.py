@@ -18,7 +18,7 @@ EMB_DIM = 128
 WIDTH = 32          # ширина первого слоя; 32 -> ~11M параметров, 16 -> ~3M
 
 # Обучение
-EPOCHS = 60
+EPOCHS = 100
 P_ITEMS = 16        # вещей в батче
 K_IMAGES = 4        # фото каждой вещи в батче -> batch = P*K = 64
 LR = 1e-3
@@ -27,5 +27,13 @@ MARGIN = 0.3
 NUM_WORKERS = 4     # на Windows при проблемах поставь 0
 EVAL_EVERY = 2      # считать Recall@K каждые N эпох
 USE_AMP = True      # смешанная точность на GPU (быстрее и меньше памяти)
+
+# ArcFace
+USE_ARCFACE = True
+ARC_S = 30.0            # масштаб логитов
+ARC_M = 0.4             # угловой зазор (рад); если не сходится — 0.3, если легко — 0.5
+ARC_WARMUP = 8          # эпох, за которые зазор растёт от 0 до ARC_M
+ARC_WEIGHT = 1.0
+TRIPLET_WEIGHT = 1.0
 
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp", ".bmp"}
