@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+data/train/
+data/query/
+data/gallery/
+checkpoints/*.pt
+*.npy
+*.pkl
+*.index
+data/raw/
+data/demo/

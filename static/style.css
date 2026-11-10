@@ -1,0 +1,43 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f5f5f4;
+  color: #1c1917;
+  line-height: 1.5;
+}
+
+header { text-align: center; padding: 40px 16px 24px; }
+header h1 { font-size: 2rem; letter-spacing: -0.02em; }
+header p { color: #57534e; }
+
+main { max-width: 1100px; margin: 0 auto; padding: 0 16px 48px; }
+
+.upload { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+
+.drop {
+  width: 100%; max-width: 420px; min-height: 260px;
+  border: 2px dashed #a8a29e; border-radius: 16px; background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; overflow: hidden; transition: border-color .2s, background .2s;
+}
+.drop:hover, .drop.over { border-color: #0f766e; background: #f0fdfa; }
+.drop img { max-width: 100%; max-height: 360px; object-fit: contain; }
+.drop span { color: #78716c; padding: 24px; text-align: center; }
+
+#status { min-height: 1.5em; color: #57534e; }
+
+.grid {
+  display: grid; gap: 16px; margin-top: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.card {
+  background: #fff; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08); display: flex; flex-direction: column;
+}
+.card img { width: 100%; aspect-ratio: 3/4; object-fit: cover; background: #e7e5e4; }
+.card .info { padding: 10px 12px; font-size: .9rem; }
+.card .title { font-weight: 600; word-break: break-word; }
+.card .score { color: #0f766e; font-variant-numeric: tabular-nums; }
+.card a { color: #0f766e; }

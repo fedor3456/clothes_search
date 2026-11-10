@@ -1,0 +1,8 @@
+# PyTorch с CUDA ставь отдельно командой с https://pytorch.org/get-started/locally/
+# например:  pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+torch>=2.2
+torchvision>=0.17
+pillow>=10.0
+fastapi>=0.110
+uvicorn>=0.29
+python-multipart>=0.0.9

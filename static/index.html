@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClothSearch — поиск одежды по фото</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ClothSearch</h1>
+    <p>Загрузи фото вещи — нейросеть найдёт похожие в каталоге</p>
+  </header>
+
+  <main>
+    <section class="upload">
+      <label id="drop" class="drop">
+        <input type="file" id="file" accept="image/*" hidden>
+        <img id="preview" alt="" hidden>
+        <span id="hint">Перетащи фото сюда или нажми, чтобы выбрать</span>
+      </label>
+      <p id="status"></p>
+    </section>
+
+    <section id="results" class="grid"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
